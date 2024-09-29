@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+}
+
+body {
+  background-image: url("assets/bg.jpg");
+  width: 100%;
+  height: 100dvh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100dvh;
+  background: rgb(0, 0, 0, 0.15);
+  backdrop-filter: blur(15px);
+}
+
+.main-countainer {
+  border: solid;
+  width: 300px;
+  height: 500px;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0, 0.15),
+    rgb(255, 255, 255, 0.15)
+  );
+  border-radius: 10px;
+  backdrop-filter: blur(100px);
+  padding: 20px;
+}
+
+/* INPUT COUNTAINER */
+.input-coun {
+  position: relative;
+  margin-bottom: 25px;
+}
+.city-input {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 99px;
+  border: 3px solid transparent;
+  background: rgb(0, 0, 0, 0.15);
+  outline: none;
+  font-weight: 500;
+  transition: 0.25s border;
+  padding-right: 45px;
+}
+
+.city-input:focus {
+  border: 3px solid rgb(0, 0, 0, 0.15);
+}
+
+.city-input::placeholder {
+  color: rgb(255, 255, 255, 0.75);
+}
+
+.search-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  display: flex;
+  border: none;
+  cursor: pointer;
+}
+/* END  INPUT COUNTAINER */
+
+/* SECTION WEATHER INFO */
+.weather-info {
+  border: solid;
+}
+
+.location-date-coun {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loc {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+/* END SECTION WEATHER INFO */
